@@ -59,6 +59,10 @@ const PostCard = ({
 
   const handleUserClick = (e: React.MouseEvent) => {
     e.stopPropagation();
+    if (isAdminPost) {
+      alert("got any queries for the admin? use the queries page on the side bar");
+      return;
+    }
     navigate(`/dashboard/alumni/${post.userId._id}`);
   };
 
